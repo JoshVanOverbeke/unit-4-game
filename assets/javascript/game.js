@@ -29,7 +29,7 @@ $(document).ready(function() {
     ]
     let foe;
     let gameRunning = false;
-    let gameOver = false;
+    let gameOver = true;
     let audio = new Audio('assets/sounds/TheCalm.mp3')
     // let enemyAudio = new Audio('assets/sounds/'+foe+'.mp3')
 
@@ -85,13 +85,6 @@ $(document).ready(function() {
             }
             enemyAppears(foe)
         }
-        else if (gameOver === true){
-            $('#gameOver').attr('src', 'assets/images/lose.png');
-            $('#gameOver').show();
-        }
-        else{
-
-        } 
     }
 
     //adds the player click to their score and checks if they won or lost
@@ -129,7 +122,6 @@ $(document).ready(function() {
     $('#foe').hide()
 
     $('#start').on('click', function(){
-        gameRunning = true;
         reset();
         updateDisplay();
         $('#health').show()
