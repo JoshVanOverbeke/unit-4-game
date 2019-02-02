@@ -3,8 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Number Game</title>
+    <title>WarCraft Worker Assault</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css"/>
 
@@ -13,21 +14,28 @@
 </head>
 
 <body>
-    <div class='container'>
+    <div class='container-fluid pt-3 pb-3 text-light'>
         <div class='row'>
-            <div class='col'>
-                <h1>Crystal Game!</h1>
-                <p></p>
-                <h2 id="shownNumber"></h2>
-                <h4 id="tracker"><p id="wins">Wins 0</p><p id="losses">Losses 0</p></h4>
-                <div>
-                    <img id="hidden1" src="https://trovesaurus.com/data/catalog/equipment_gem_small_red_01.png" alt="">
-                    <img id="hidden2" src="https://trovesaurus.com/data/catalog/equipment_gem_small_yellow_01.png" alt="">
-                    <img id="hidden3" src="https://vignette.wikia.nocookie.net/trove/images/b/b5/Lesser_Water_Gem.png/revision/latest?cb=20180625115935" alt="">
-                    <img id="hidden4" src="https://trovesaurus.com/data/catalog/equipment_gem_small_opal_01.png" alt="">
+            <div class='col-lg-12 text-center'>
+                <h1 class="border-bottom border-dark pb-2">WarCraft Worker Assault!</h1>
+                <h5 id='explain'>The workers of WarCraft are tired of harvesting gold and lumber! Give them the courage to attack back by clicking on them!</h5>
+                <h5 id='explain'>Each worker is assigned a hidden Attack Power from 1-12 at the start of a round. Drain the health of the enemy by clicking on a worker. To win the enemy's health must equal exactly 0.</h5>
+                <h5 id='explain'>To win, the enemy's health must equal exactly 0.</h5>
+                <h3 id='enemy'class='border-top border-dark pt-2 pb-2 mt-2 mb-2'>Enemy</h3>
+                <h2 id='name'></h2>
+                <img src="" id="foe" class="border border-dark" alt="foe">
+                <img src="" id="gameOver" class="border border-dark" alt="gameOver">
+                <h2 id="shownNumber" class="pt-2"></h2>
+                <h4 id='health' class="text-success">Health</h4>
+                <h4 id="tracker" class><p id="wins" class="text-warning border-top pt-2 border-dark">Wins 0</p><p id="losses" class="text-danger pb-2 border-bottom border-dark">Losses 0</p></h4>
+                <div class='pb-2'>
+                    <img id="hidden1" src="assets/images/acolyte.png" class="img-fluid" alt="1">
+                    <img id="hidden2" src="assets/images/peon.png" class="img-fluid" alt="2">
+                    <img id="hidden3" src="assets/images/peasant.png" class="img-fluid" alt="3">
+                    <img id="hidden4" src="assets/images/wisp.png" class="img-fluid" alt="4">
                 </div>
-                <p>Your total score is:</p>
-                <h2 id="guessNumber"></h2>
+                <h3 class='border-top border-dark pb-2 pt-2'>Workers</h3>
+                <button id='start' class='btn btn-dark btn-lg'>Start</button>
             </div>
         </div>
     </div>
